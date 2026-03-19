@@ -1,0 +1,244 @@
+input,target
+action: turn direction: left distance: 10m landmark: lift,"In 10m, turn left towards the lift."
+action: continue distance: 20m,Continue straight for 20m.
+action: stop reason: hazard description: crowd ahead,Please stop. Caution: crowd ahead.
+action: turn direction: left distance: 20m landmark: staircase,"After 20m, take a left turn at the staircase."
+action: turn direction: left distance: 10m landmark: reception desk,"Turn left in 10m, heading towards the reception desk."
+action: turn direction: left distance: 50m landmark: main entrance,"In 50m, turn left towards the main entrance."
+action: turn direction: left distance: 30m landmark: escalator,"After 30m, take a left turn at the escalator."
+action: turn direction: right distance: 5m landmark: escalator,"In 5m, turn right towards the escalator."
+action: turn direction: right distance: 30m landmark: main entrance,"Turn right in 30m, heading towards the main entrance."
+action: turn direction: right distance: 30m landmark: main entrance,"After 30m, take a right turn at the main entrance."
+action: turn direction: right distance: 50m landmark: main entrance,"Turn right in 50m, heading towards the main entrance."
+action: turn direction: right distance: 5m landmark: reception desk,"In 5m, turn right towards the reception desk."
+action: continue distance: 10m,Continue straight for 10m.
+action: turn direction: left distance: 50m landmark: staircase,"In 50m, turn left towards the staircase."
+action: turn direction: right distance: 10m landmark: staircase,"In 10m, turn right towards the staircase."
+action: turn direction: left distance: 20m landmark: escalator,"After 20m, take a left turn at the escalator."
+action: turn direction: right distance: 30m landmark: reception desk,"After 30m, take a right turn at the reception desk."
+action: turn direction: right distance: 50m landmark: escalator,"Turn right in 50m, heading towards the escalator."
+action: turn direction: right distance: 15m landmark: escalator,"Turn right in 15m, heading towards the escalator."
+action: turn direction: left distance: 50m landmark: reception desk,"In 50m, turn left towards the reception desk."
+action: turn direction: right distance: 20m landmark: reception desk,"In 20m, turn right towards the reception desk."
+action: turn direction: left distance: 10m landmark: reception desk,"In 10m, turn left towards the reception desk."
+action: turn direction: left distance: 10m landmark: staircase,"In 10m, turn left towards the staircase."
+action: stop reason: hazard description: step down,Stop. There is a step down ahead.
+action: turn direction: left distance: 10m landmark: escalator,"After 10m, take a left turn at the escalator."
+action: turn direction: left distance: 30m landmark: reception desk,"In 30m, turn left towards the reception desk."
+action: turn direction: right distance: 15m landmark: reception desk,"After 15m, take a right turn at the reception desk."
+action: turn direction: left distance: 50m landmark: staircase,"After 50m, take a left turn at the staircase."
+action: continue distance: 15m,Keep going forward for 15m.
+action: turn direction: left distance: 15m landmark: lift,"In 15m, turn left towards the lift."
+action: turn direction: right distance: 10m landmark: lift,"Turn right in 10m, heading towards the lift."
+action: turn direction: right distance: 50m landmark: reception desk,"After 50m, take a right turn at the reception desk."
+action: turn direction: right distance: 30m landmark: main entrance,"In 30m, turn right towards the main entrance."
+action: arrive landmark: reception desk,You have arrived at the reception desk.
+action: turn direction: right distance: 50m landmark: main entrance,"In 50m, turn right towards the main entrance."
+action: turn direction: left distance: 5m landmark: escalator,"In 5m, turn left towards the escalator."
+action: stop reason: hazard description: wet floor,Stop. There is a wet floor ahead.
+action: turn direction: left distance: 30m landmark: lift,"In 30m, turn left towards the lift."
+action: arrive landmark: ticket gate,"Your destination, the ticket gate, is here."
+action: turn direction: left distance: 50m landmark: escalator,"After 50m, take a left turn at the escalator."
+action: turn direction: right distance: 30m landmark: escalator,"In 30m, turn right towards the escalator."
+action: stop reason: hazard description: construction barrier,Please stop. Caution: construction barrier.
+action: turn direction: left distance: 30m landmark: main entrance,"In 30m, turn left towards the main entrance."
+action: turn direction: right distance: 15m landmark: staircase,"In 15m, turn right towards the staircase."
+action: turn direction: left distance: 5m landmark: staircase,"Turn left in 5m, heading towards the staircase."
+action: turn direction: right distance: 5m landmark: lift,"After 5m, take a right turn at the lift."
+action: turn direction: left distance: 20m landmark: reception desk,"After 20m, take a left turn at the reception desk."
+action: turn direction: right distance: 5m landmark: main entrance,"Turn right in 5m, heading towards the main entrance."
+action: turn direction: left distance: 5m landmark: main entrance,"In 5m, turn left towards the main entrance."
+action: turn direction: left distance: 50m landmark: lift,"Turn left in 50m, heading towards the lift."
+action: turn direction: left distance: 30m landmark: reception desk,"After 30m, take a left turn at the reception desk."
+action: turn direction: right distance: 30m landmark: escalator,"After 30m, take a right turn at the escalator."
+action: continue distance: 15m,Walk straight ahead for 15m.
+action: continue distance: 5m,Continue straight for 5m.
+action: turn direction: right distance: 50m landmark: reception desk,"In 50m, turn right towards the reception desk."
+action: turn direction: right distance: 50m landmark: lift,"In 50m, turn right towards the lift."
+action: turn direction: right distance: 50m landmark: staircase,"Turn right in 50m, heading towards the staircase."
+action: turn direction: left distance: 20m landmark: lift,"After 20m, take a left turn at the lift."
+action: continue distance: 50m,Continue straight for 50m.
+action: turn direction: left distance: 30m landmark: reception desk,"Turn left in 30m, heading towards the reception desk."
+action: turn direction: right distance: 10m landmark: main entrance,"In 10m, turn right towards the main entrance."
+action: turn direction: left distance: 10m landmark: main entrance,"In 10m, turn left towards the main entrance."
+action: turn direction: right distance: 15m landmark: reception desk,"Turn right in 15m, heading towards the reception desk."
+action: turn direction: right distance: 15m landmark: staircase,"Turn right in 15m, heading towards the staircase."
+action: turn direction: right distance: 5m landmark: staircase,"After 5m, take a right turn at the staircase."
+action: arrive landmark: reception desk,You are now at the reception desk.
+action: arrive landmark: ticket gate,You have arrived at the ticket gate.
+action: turn direction: right distance: 5m landmark: staircase,"Turn right in 5m, heading towards the staircase."
+action: turn direction: left distance: 30m landmark: escalator,"In 30m, turn left towards the escalator."
+action: turn direction: right distance: 10m landmark: escalator,"In 10m, turn right towards the escalator."
+action: turn direction: right distance: 15m landmark: lift,"After 15m, take a right turn at the lift."
+action: turn direction: left distance: 50m landmark: lift,"In 50m, turn left towards the lift."
+action: turn direction: right distance: 10m landmark: reception desk,"Turn right in 10m, heading towards the reception desk."
+action: turn direction: left distance: 20m landmark: reception desk,"Turn left in 20m, heading towards the reception desk."
+action: arrive landmark: information booth,"Your destination, the information booth, is here."
+action: turn direction: right distance: 5m landmark: reception desk,"Turn right in 5m, heading towards the reception desk."
+action: turn direction: left distance: 30m landmark: main entrance,"After 30m, take a left turn at the main entrance."
+action: turn direction: left distance: 5m landmark: lift,"After 5m, take a left turn at the lift."
+action: arrive landmark: staircase,You are now at the staircase.
+action: turn direction: left distance: 30m landmark: lift,"After 30m, take a left turn at the lift."
+action: turn direction: right distance: 50m landmark: escalator,"After 50m, take a right turn at the escalator."
+action: continue distance: 30m,Continue straight for 30m.
+action: turn direction: left distance: 5m landmark: reception desk,"After 5m, take a left turn at the reception desk."
+action: turn direction: left distance: 50m landmark: staircase,"Turn left in 50m, heading towards the staircase."
+action: turn direction: left distance: 50m landmark: lift,"After 50m, take a left turn at the lift."
+action: turn direction: left distance: 10m landmark: escalator,"Turn left in 10m, heading towards the escalator."
+action: stop reason: hazard description: low ceiling,Please stop. Caution: low ceiling.
+action: stop reason: hazard description: step down,Please stop. Caution: step down.
+action: arrive landmark: shop,You have arrived at the shop.
+action: turn direction: right distance: 5m landmark: lift,"In 5m, turn right towards the lift."
+action: stop reason: hazard description: wet floor,Stop immediately. Wet floor detected ahead.
+action: turn direction: right distance: 15m landmark: main entrance,"After 15m, take a right turn at the main entrance."
+action: turn direction: left distance: 20m landmark: main entrance,"In 20m, turn left towards the main entrance."
+action: turn direction: left distance: 5m landmark: reception desk,"In 5m, turn left towards the reception desk."
+action: turn direction: left distance: 5m landmark: lift,"Turn left in 5m, heading towards the lift."
+action: turn direction: left distance: 15m landmark: main entrance,"Turn left in 15m, heading towards the main entrance."
+action: turn direction: left distance: 15m landmark: escalator,"Turn left in 15m, heading towards the escalator."
+action: turn direction: left distance: 20m landmark: main entrance,"Turn left in 20m, heading towards the main entrance."
+action: arrive landmark: escalator,You have arrived at the escalator.
+action: turn direction: right distance: 10m landmark: escalator,"Turn right in 10m, heading towards the escalator."
+action: turn direction: left distance: 20m landmark: main entrance,"After 20m, take a left turn at the main entrance."
+action: turn direction: left distance: 30m landmark: escalator,"Turn left in 30m, heading towards the escalator."
+action: arrive landmark: exit,You have arrived at the exit.
+action: turn direction: left distance: 5m landmark: main entrance,"Turn left in 5m, heading towards the main entrance."
+action: turn direction: right distance: 10m landmark: staircase,"After 10m, take a right turn at the staircase."
+action: turn direction: left distance: 15m landmark: staircase,"In 15m, turn left towards the staircase."
+action: turn direction: left distance: 15m landmark: escalator,"After 15m, take a left turn at the escalator."
+action: turn direction: left distance: 20m landmark: escalator,"Turn left in 20m, heading towards the escalator."
+action: turn direction: left distance: 5m landmark: staircase,"After 5m, take a left turn at the staircase."
+action: stop reason: hazard description: low ceiling,Stop immediately. Low ceiling detected ahead.
+action: turn direction: left distance: 10m landmark: main entrance,"After 10m, take a left turn at the main entrance."
+action: arrive landmark: main entrance,"Your destination, the main entrance, is here."
+action: turn direction: left distance: 10m landmark: escalator,"In 10m, turn left towards the escalator."
+action: turn direction: right distance: 50m landmark: main entrance,"After 50m, take a right turn at the main entrance."
+action: turn direction: right distance: 50m landmark: staircase,"In 50m, turn right towards the staircase."
+action: turn direction: left distance: 50m landmark: main entrance,"Turn left in 50m, heading towards the main entrance."
+action: turn direction: right distance: 20m landmark: escalator,"Turn right in 20m, heading towards the escalator."
+action: turn direction: left distance: 30m landmark: lift,"Turn left in 30m, heading towards the lift."
+action: arrive landmark: ticket gate,You are now at the ticket gate.
+action: turn direction: right distance: 10m landmark: lift,"In 10m, turn right towards the lift."
+action: arrive landmark: platform 3,You are now at the platform 3.
+action: continue distance: 30m,Keep going forward for 30m.
+action: turn direction: right distance: 30m landmark: lift,"After 30m, take a right turn at the lift."
+action: arrive landmark: main entrance,You have arrived at the main entrance.
+action: turn direction: right distance: 15m landmark: escalator,"In 15m, turn right towards the escalator."
+action: stop reason: hazard description: low ceiling,Stop. There is a low ceiling ahead.
+action: turn direction: left distance: 50m landmark: reception desk,"After 50m, take a left turn at the reception desk."
+action: turn direction: left distance: 15m landmark: staircase,"After 15m, take a left turn at the staircase."
+action: turn direction: right distance: 15m landmark: lift,"Turn right in 15m, heading towards the lift."
+action: turn direction: left distance: 10m landmark: lift,"After 10m, take a left turn at the lift."
+action: turn direction: right distance: 20m landmark: staircase,"In 20m, turn right towards the staircase."
+action: turn direction: right distance: 10m landmark: reception desk,"After 10m, take a right turn at the reception desk."
+action: stop reason: hazard description: construction barrier,Stop. There is a construction barrier ahead.
+action: turn direction: right distance: 5m landmark: main entrance,"In 5m, turn right towards the main entrance."
+action: turn direction: right distance: 30m landmark: staircase,"Turn right in 30m, heading towards the staircase."
+action: turn direction: left distance: 30m landmark: staircase,"Turn left in 30m, heading towards the staircase."
+action: turn direction: left distance: 20m landmark: escalator,"In 20m, turn left towards the escalator."
+action: turn direction: right distance: 10m landmark: escalator,"After 10m, take a right turn at the escalator."
+action: turn direction: right distance: 20m landmark: lift,"In 20m, turn right towards the lift."
+action: turn direction: right distance: 15m landmark: lift,"In 15m, turn right towards the lift."
+action: turn direction: left distance: 50m landmark: escalator,"Turn left in 50m, heading towards the escalator."
+action: turn direction: left distance: 15m landmark: lift,"After 15m, take a left turn at the lift."
+action: turn direction: left distance: 5m landmark: lift,"In 5m, turn left towards the lift."
+action: continue distance: 20m,Walk straight ahead for 20m.
+action: turn direction: right distance: 10m landmark: main entrance,"After 10m, take a right turn at the main entrance."
+action: arrive landmark: staircase,You have arrived at the staircase.
+action: turn direction: left distance: 20m landmark: lift,"In 20m, turn left towards the lift."
+action: turn direction: right distance: 15m landmark: reception desk,"In 15m, turn right towards the reception desk."
+action: arrive landmark: exit,"Your destination, the exit, is here."
+action: turn direction: right distance: 10m landmark: main entrance,"Turn right in 10m, heading towards the main entrance."
+action: turn direction: left distance: 30m landmark: staircase,"In 30m, turn left towards the staircase."
+action: continue distance: 30m,Walk straight ahead for 30m.
+action: turn direction: right distance: 5m landmark: staircase,"In 5m, turn right towards the staircase."
+action: turn direction: left distance: 15m landmark: main entrance,"After 15m, take a left turn at the main entrance."
+action: continue distance: 50m,Walk straight ahead for 50m.
+action: arrive landmark: escalator,"Your destination, the escalator, is here."
+action: turn direction: right distance: 15m landmark: main entrance,"Turn right in 15m, heading towards the main entrance."
+action: turn direction: left distance: 20m landmark: staircase,"Turn left in 20m, heading towards the staircase."
+action: arrive landmark: escalator,You are now at the escalator.
+action: arrive landmark: reception desk,"Your destination, the reception desk, is here."
+action: turn direction: right distance: 30m landmark: reception desk,"Turn right in 30m, heading towards the reception desk."
+action: turn direction: right distance: 20m landmark: lift,"After 20m, take a right turn at the lift."
+action: stop reason: hazard description: construction barrier,Stop immediately. Construction barrier detected ahead.
+action: turn direction: left distance: 5m landmark: escalator,"Turn left in 5m, heading towards the escalator."
+action: arrive landmark: lift,You have arrived at the lift.
+action: stop reason: hazard description: step down,Stop immediately. Step down detected ahead.
+action: turn direction: right distance: 50m landmark: lift,"Turn right in 50m, heading towards the lift."
+action: turn direction: right distance: 50m landmark: escalator,"In 50m, turn right towards the escalator."
+action: continue distance: 10m,Walk straight ahead for 10m.
+action: arrive landmark: staircase,"Your destination, the staircase, is here."
+action: turn direction: right distance: 5m landmark: main entrance,"After 5m, take a right turn at the main entrance."
+action: arrive landmark: exit,You are now at the exit.
+action: arrive landmark: shop,You are now at the shop.
+action: stop reason: hazard description: wet floor,Please stop. Caution: wet floor.
+action: arrive landmark: lift,You are now at the lift.
+action: arrive landmark: information booth,You have arrived at the information booth.
+action: turn direction: right distance: 20m landmark: reception desk,"After 20m, take a right turn at the reception desk."
+action: turn direction: left distance: 15m landmark: staircase,"Turn left in 15m, heading towards the staircase."
+action: turn direction: right distance: 5m landmark: escalator,"Turn right in 5m, heading towards the escalator."
+action: turn direction: left distance: 30m landmark: main entrance,"Turn left in 30m, heading towards the main entrance."
+action: turn direction: right distance: 15m landmark: staircase,"After 15m, take a right turn at the staircase."
+action: turn direction: right distance: 30m landmark: reception desk,"In 30m, turn right towards the reception desk."
+action: turn direction: right distance: 30m landmark: escalator,"Turn right in 30m, heading towards the escalator."
+action: turn direction: left distance: 30m landmark: staircase,"After 30m, take a left turn at the staircase."
+action: turn direction: left distance: 50m landmark: main entrance,"After 50m, take a left turn at the main entrance."
+action: turn direction: right distance: 30m landmark: staircase,"In 30m, turn right towards the staircase."
+action: turn direction: left distance: 50m landmark: escalator,"In 50m, turn left towards the escalator."
+action: turn direction: left distance: 10m landmark: staircase,"Turn left in 10m, heading towards the staircase."
+action: turn direction: left distance: 5m landmark: main entrance,"After 5m, take a left turn at the main entrance."
+action: turn direction: right distance: 30m landmark: lift,"In 30m, turn right towards the lift."
+action: turn direction: right distance: 50m landmark: staircase,"After 50m, take a right turn at the staircase."
+action: turn direction: left distance: 15m landmark: lift,"Turn left in 15m, heading towards the lift."
+action: turn direction: right distance: 5m landmark: reception desk,"After 5m, take a right turn at the reception desk."
+action: turn direction: right distance: 20m landmark: escalator,"After 20m, take a right turn at the escalator."
+action: turn direction: right distance: 20m landmark: lift,"Turn right in 20m, heading towards the lift."
+action: arrive landmark: platform 3,You have arrived at the platform 3.
+action: turn direction: right distance: 20m landmark: main entrance,"Turn right in 20m, heading towards the main entrance."
+action: turn direction: right distance: 30m landmark: lift,"Turn right in 30m, heading towards the lift."
+action: continue distance: 5m,Keep going forward for 5m.
+action: turn direction: right distance: 15m landmark: escalator,"After 15m, take a right turn at the escalator."
+action: arrive landmark: main entrance,You are now at the main entrance.
+action: turn direction: left distance: 20m landmark: reception desk,"In 20m, turn left towards the reception desk."
+action: turn direction: left distance: 5m landmark: escalator,"After 5m, take a left turn at the escalator."
+action: continue distance: 10m,Keep going forward for 10m.
+action: turn direction: left distance: 50m landmark: reception desk,"Turn left in 50m, heading towards the reception desk."
+action: arrive landmark: shop,"Your destination, the shop, is here."
+action: turn direction: right distance: 20m landmark: main entrance,"In 20m, turn right towards the main entrance."
+action: turn direction: left distance: 10m landmark: lift,"Turn left in 10m, heading towards the lift."
+action: continue distance: 50m,Keep going forward for 50m.
+action: continue distance: 15m,Continue straight for 15m.
+action: stop reason: hazard description: crowd ahead,Stop immediately. Crowd ahead detected ahead.
+action: turn direction: left distance: 15m landmark: reception desk,"Turn left in 15m, heading towards the reception desk."
+action: turn direction: right distance: 5m landmark: lift,"Turn right in 5m, heading towards the lift."
+action: stop reason: hazard description: crowd ahead,Stop. There is a crowd ahead ahead.
+action: turn direction: left distance: 10m landmark: main entrance,"Turn left in 10m, heading towards the main entrance."
+action: turn direction: right distance: 50m landmark: lift,"After 50m, take a right turn at the lift."
+action: turn direction: left distance: 5m landmark: staircase,"In 5m, turn left towards the staircase."
+action: turn direction: right distance: 10m landmark: staircase,"Turn right in 10m, heading towards the staircase."
+action: turn direction: left distance: 10m landmark: reception desk,"After 10m, take a left turn at the reception desk."
+action: turn direction: right distance: 10m landmark: lift,"After 10m, take a right turn at the lift."
+action: turn direction: right distance: 20m landmark: reception desk,"Turn right in 20m, heading towards the reception desk."
+action: turn direction: right distance: 20m landmark: escalator,"In 20m, turn right towards the escalator."
+action: continue distance: 5m,Walk straight ahead for 5m.
+action: turn direction: left distance: 15m landmark: reception desk,"In 15m, turn left towards the reception desk."
+action: turn direction: left distance: 15m landmark: main entrance,"In 15m, turn left towards the main entrance."
+action: turn direction: left distance: 20m landmark: lift,"Turn left in 20m, heading towards the lift."
+action: continue distance: 20m,Keep going forward for 20m.
+action: arrive landmark: lift,"Your destination, the lift, is here."
+action: turn direction: left distance: 20m landmark: staircase,"In 20m, turn left towards the staircase."
+action: turn direction: right distance: 20m landmark: main entrance,"After 20m, take a right turn at the main entrance."
+action: turn direction: right distance: 5m landmark: escalator,"After 5m, take a right turn at the escalator."
+action: turn direction: right distance: 10m landmark: reception desk,"In 10m, turn right towards the reception desk."
+action: turn direction: right distance: 15m landmark: main entrance,"In 15m, turn right towards the main entrance."
+action: arrive landmark: platform 3,"Your destination, the platform 3, is here."
+action: turn direction: right distance: 30m landmark: staircase,"After 30m, take a right turn at the staircase."
+action: turn direction: left distance: 10m landmark: staircase,"After 10m, take a left turn at the staircase."
+action: turn direction: right distance: 20m landmark: staircase,"After 20m, take a right turn at the staircase."
+action: turn direction: left distance: 15m landmark: reception desk,"After 15m, take a left turn at the reception desk."
+action: turn direction: right distance: 20m landmark: staircase,"Turn right in 20m, heading towards the staircase."
+action: turn direction: left distance: 5m landmark: reception desk,"Turn left in 5m, heading towards the reception desk."
+action: arrive landmark: information booth,You are now at the information booth.
+action: turn direction: left distance: 15m landmark: escalator,"In 15m, turn left towards the escalator."
+action: turn direction: right distance: 50m landmark: reception desk,"Turn right in 50m, heading towards the reception desk."
