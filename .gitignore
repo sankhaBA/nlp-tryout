@@ -2,3 +2,5 @@ nav_t5_model_v1
 nav_t5_final_v1
 venv
 .env
+
+training-history

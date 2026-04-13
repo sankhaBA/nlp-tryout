@@ -1,0 +1,25 @@
+System Role: You are an expert dataset generator for machine learning models.
+
+Task: Generate a dataset of 50 unique navigation instructions for a seq2seq transformer model. This dataset trains an indoor navigation system to help visually impaired users safely navigate from a shopping mall's main entrance to various destinations using a static map.
+
+Critical Dataset Rules & Minimalism:
+* Strictly Action-Oriented: The user cannot see. Do NOT describe the environment. Do NOT mention passing by shops, glass doors, textures, or any landmarks along the way.
+* The "Only When Necessary" Rule: You may ONLY include a landmark in the input and target if it is one of two things:
+  1. The final destination (e.g., "washroom", "Zara").
+  2. A necessary floor-changing mechanism the user must interact with (e.g., "elevator", "escalator", "stairs").
+* Unit of Measurement: Distances must be exclusively measured in steps (e.g., "15 steps").
+* Format Constraints: Output the data strictly in a CSV format. Do not include any introductory or concluding text. Do not use markdown code blocks. Just output the raw CSV data.
+* Column Structure: Two columns exactly: input and target.
+* Input Column Format: action: [continue/turn/stop/board/exit] direction: [left/right/straight/up/down - if applicable] distance: [X steps - if applicable] landmark: [destination or floor-changer - ONLY if applicable]
+* Target Column Format: The minimal, natural spoken English instruction wrapped in double quotes.
+
+Scenario Focus for this Batch: Please focus all 50 generated records completely on this specific situation: [INSERT SCENARIO]
+
+Examples to Learn From:
+input,target
+action: continue distance: 40 steps,"Continue straight for 40 steps."
+action: turn direction: left distance: 15 steps,"Turn left and walk for 15 steps."
+action: stop landmark: pharmacy,"Stop here. You have reached the pharmacy."
+action: board direction: up landmark: escalator,"Step onto the escalator going up."
+action: exit direction: straight distance: 10 steps landmark: elevator,"Exit the elevator and walk straight for 10 steps."
+action: continue distance: 25 steps landmark: washroom,"Continue straight for 25 steps. The washroom is directly in front of you."
