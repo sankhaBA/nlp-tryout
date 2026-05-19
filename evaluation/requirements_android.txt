@@ -1,0 +1,11 @@
+# Android / Termux requirements — on-device evaluation (Phase 4)
+# Install in Termux with: pip install -r requirements_android.txt
+# Note: onnxruntime installs the ARM64 CPU build automatically on Termux.
+
+onnxruntime
+optimum[onnxruntime]
+transformers
+tokenizers
+sentencepiece
+rouge-score
+psutil

@@ -4,3 +4,7 @@ venv
 .env
 
 training-history
+
+evaluation/model
+evaluation/quantized
+evaluation/onnx
