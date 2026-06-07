@@ -1,7 +1,6 @@
 """Central configuration for the TFLite on-device evaluation pipeline.
 
 Mirrors evaluation/config.py but targets TFLite outputs.
-Source HuggingFace models are shared with the ONNX pipeline (evaluation/model/).
 """
 from __future__ import annotations
 
@@ -10,8 +9,8 @@ from pathlib import Path
 
 EVAL_ROOT = Path(__file__).parent
 
-# Source HF models — shared with the ONNX evaluation pipeline
-MODEL_ROOT = EVAL_ROOT.parent / "evaluation" / "model"
+# Source HF models — stored locally inside evaluation_tflite/model/
+MODEL_ROOT = EVAL_ROOT / "model"
 
 # Shared dataset
 DATASET_DIR = EVAL_ROOT / "dataset"
