@@ -14,7 +14,7 @@ EVAL_ROOT = Path(__file__).parent
 MODEL_ROOT = EVAL_ROOT.parent / "evaluation" / "model"
 
 # Shared dataset
-DATASET_DIR = EVAL_ROOT.parent / "evaluation" / "dataset"
+DATASET_DIR = EVAL_ROOT / "dataset"
 
 # TFLite-specific output directories (all local to evaluation_tflite/)
 SAVED_MODEL_ROOT = EVAL_ROOT / "saved_model"   # intermediate TF SavedModels

@@ -1,9 +1,0 @@
-# PC requirements — ONNX export (Phase 1.2) and INT8 quantization (Phase 1.3)
-# Install with: pip install -r evaluation/requirements_pc.txt
-
-optimum[exporters,onnxruntime]>=1.17.0
-onnx>=1.15.0
-onnxruntime>=1.17.0
-transformers>=4.38.0
-torch>=2.0.0
-sentencepiece>=0.1.99

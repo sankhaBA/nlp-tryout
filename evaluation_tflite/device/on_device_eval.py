@@ -36,7 +36,7 @@ from typing import Any
 
 def load_models(model_dir: Path):
     try:
-        import tflite_runtime.interpreter as tflite
+        from ai_edge_litert import interpreter as tflite
     except ImportError:
         sys.exit(
             "tflite-runtime is not installed.\n"
