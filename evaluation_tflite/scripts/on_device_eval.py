@@ -10,11 +10,18 @@ Run from the project root or evaluation_tflite/ directory:
 
 Install PC dependencies first:
     pip install -r evaluation_tflite/requirements_pc.txt
+
+Each run writes three artefacts to evaluation_tflite/results/<run_id>/:
+    summary.json   — full metrics + per-sample data (machine-readable)
+    per_sample.csv — tabular predictions (spreadsheet-friendly)
+    report.txt     — human-readable report printed to console as well
+A cumulative runs_index.json in results/ tracks key metrics across all runs.
 """
 from __future__ import annotations
 
 import argparse
 import csv
+import datetime
 import gc
 import json
 import os
@@ -25,7 +32,12 @@ from pathlib import Path
 from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from config import default_dataset, get_quantized_dir, resolve_model_version
+from config import (
+    RESULTS_ROOT,
+    default_dataset,
+    get_quantized_dir,
+    resolve_model_version,
+)
 
 
 # ── TFLite interpreter loader ─────────────────────────────────────────────────
@@ -60,8 +72,6 @@ def _get_tflite():
 def _make_interpreter(tflite, model_path: str, use_flex: bool):
     """Create a TFLite Interpreter, enabling the Flex delegate when available."""
     if use_flex:
-        # Full TF includes the Flex delegate; SELECT_TF_OPS enables it so that
-        # models containing ops like FlexStridedSlice can run on PC.
         try:
             resolver = tflite.experimental.OpResolverType.SELECT_TF_OPS
             return tflite.Interpreter(model_path=model_path,
@@ -124,7 +134,6 @@ def _name_key(full: str) -> str:
 def _run_encoder(enc_interp, input_ids, attention_mask):
     import numpy as np
 
-    # Resolve name->index BEFORE resize so we resize the correct slots.
     in_details = enc_interp.get_input_details()
     name_to_idx = {_name_key(d["name"]): d["index"] for d in in_details}
 
@@ -135,7 +144,6 @@ def _run_encoder(enc_interp, input_ids, attention_mask):
     enc_interp.resize_tensor_input(_idx("attention_mask", 1), attention_mask.shape)
     enc_interp.allocate_tensors()
 
-    # Re-fetch details after reallocation (indices are stable but good practice).
     in_details = enc_interp.get_input_details()
     name_to_idx = {_name_key(d["name"]): d["index"] for d in in_details}
 
@@ -190,13 +198,11 @@ def predict(
     for _ in range(max_length):
         dec_input = np.array([tokens], dtype=np.int32)
         logits = _run_decoder_step(dec_interp, dec_input, encoder_hidden_states)
-        # logits shape: [1, dec_len, vocab_size] — pick the last position
         next_token = int(np.argmax(logits[0, -1]))
         tokens.append(next_token)
         if next_token == eos_token_id:
             break
 
-    # Decode, stripping the leading decoder_start token and any EOS
     skip = {decoder_start_token_id, eos_token_id}
     output_ids = [t for t in tokens if t not in skip]
     return tokenizer.decode(output_ids)
@@ -271,11 +277,10 @@ def run_evaluation(
         latencies.append(latency_ms)
 
         results.append({
-            "input":        row["input"],
-            "target":       row["target"],
-            "predicted":    predicted,
-            "exact_match":  predicted.strip().lower() == row["target"].strip().lower(),
-            "latency_ms":   round(latency_ms, 2),
+            "input":      row["input"],
+            "target":     row["target"],
+            "predicted":  predicted,
+            "latency_ms": round(latency_ms, 2),
         })
 
         if (i + 1) % log_every == 0 or (i + 1) == len(rows):
@@ -287,23 +292,31 @@ def run_evaluation(
     return results, latencies, peak_mem
 
 
-# ── summary ───────────────────────────────────────────────────────────────────
+# ── summary & reporting ───────────────────────────────────────────────────────
 
 def build_summary(
     results: list[dict],
     latencies: list[float],
     peak_mem_mb: float,
     model_dir: Path,
+    *,
+    run_id: str = "",
+    timestamp: str = "",
+    platform: str = "",
+    model_version: str = "",
+    dataset_name: str = "",
 ) -> dict[str, Any]:
-    exact_matches = [r["exact_match"] for r in results]
-    accuracy = sum(exact_matches) / len(exact_matches)
     n = len(latencies)
     sorted_lat = sorted(latencies)
 
     return {
+        "run_id":        run_id,
+        "timestamp":     timestamp,
+        "platform":      platform,
+        "model_version": model_version,
+        "dataset":       dataset_name,
         "accuracy": {
-            "n_samples":   n,
-            "exact_match": round(accuracy, 4),
+            "n_samples": n,
             **compute_rouge(results),
         },
         "latency_ms": {
@@ -325,6 +338,146 @@ def build_summary(
     }
 
 
+def _detect_platform() -> str:
+    """Auto-detect the runtime environment for the run-ID tag."""
+    if "ANDROID_ROOT" in os.environ:
+        return "android"
+    if sys.platform == "win32":
+        return "windows"
+    if sys.platform == "darwin":
+        return "macos"
+    return "linux"
+
+
+def _format_report(
+    run_id: str,
+    platform_tag: str,
+    model_version: str,
+    dataset_name: str,
+    summary: dict,
+    results: list[dict],
+) -> str:
+    W    = 68
+    SEP  = "=" * W
+    DASH = "-" * W
+
+    acc = summary["accuracy"]
+    lat = summary["latency_ms"]
+    mem = summary["memory_mb"]
+    n   = acc["n_samples"]
+
+    def lr(label: str, value: str) -> str:
+        return f"  {label:<22}{value}"
+
+    lines = [
+        SEP,
+        "  TFLite Navigation Model — Evaluation Report",
+        SEP,
+        lr("Run ID :",    run_id),
+        lr("Platform :",  platform_tag),
+        lr("Model :",     model_version),
+        lr("Dataset :",   f"{dataset_name}  ({n} samples)"),
+        lr("Timestamp :", summary.get("timestamp", "unknown")),
+        SEP,
+        "  ROUGE SCORES",
+    ]
+
+    for key, label in [
+        ("rouge1_f1", "  ROUGE-1 F1 :"),
+        ("rouge2_f1", "  ROUGE-2 F1 :"),
+        ("rougeL_f1", "  ROUGE-L F1 :"),
+    ]:
+        if key in acc:
+            lines.append(lr(label, f"{acc[key]:.4f}"))
+
+    lines += [
+        DASH,
+        "  LATENCY",
+        lr("  Mean :",   f"{lat['mean']:.1f} ms"),
+        lr("  Median :", f"{lat['median']:.1f} ms"),
+        lr("  P95 :",    f"{lat['p95']:.1f} ms"),
+        lr("  P99 :",    f"{lat['p99']:.1f} ms"),
+        lr("  Min :",    f"{lat['min']:.1f} ms"),
+        lr("  Max :",    f"{lat['max']:.1f} ms"),
+        DASH,
+        "  MEMORY",
+        lr("  Peak RSS :", f"{mem['peak_rss_mb']:.1f} MB"),
+        DASH,
+        "  MODEL FILES",
+    ]
+    for fname, size_mb in summary.get("model_files_mb", {}).items():
+        lines.append(f"  {fname:<40}  {size_mb:.1f} MB")
+
+    lines.append(SEP)
+    lines.append("  PREDICTION SAMPLES")
+    lines.append("")
+    for r in results[:5]:
+        lines += [
+            f"  Input     : {r['input']}",
+            f"  Target    : {r['target']}",
+            f"  Predicted : {r['predicted']}",
+            "",
+        ]
+
+    lines.append(SEP)
+    return "\n".join(lines)
+
+
+def save_run_outputs(
+    run_id: str,
+    run_dir: Path,
+    summary: dict,
+    results: list[dict],
+    platform_tag: str,
+    model_version: str,
+    dataset_name: str,
+) -> None:
+    """Write summary.json, per_sample.csv, and report.txt into run_dir."""
+    run_dir.mkdir(parents=True, exist_ok=True)
+
+    with open(run_dir / "summary.json", "w", encoding="utf-8") as fh:
+        json.dump(summary, fh, indent=2)
+
+    with open(run_dir / "per_sample.csv", "w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(
+            fh, fieldnames=["idx", "latency_ms", "input", "target", "predicted"]
+        )
+        writer.writeheader()
+        for i, r in enumerate(results):
+            writer.writerow({
+                "idx":        i,
+                "latency_ms": r["latency_ms"],
+                "input":      r["input"],
+                "target":     r["target"],
+                "predicted":  r["predicted"],
+            })
+
+    report = _format_report(run_id, platform_tag, model_version, dataset_name, summary, results)
+    with open(run_dir / "report.txt", "w", encoding="utf-8") as fh:
+        fh.write(report)
+
+    print(report)
+    print(f"\n[save] {run_dir}")
+    print(f"       summary.json  |  per_sample.csv  |  report.txt")
+
+
+def _update_runs_index(results_root: Path, entry: dict) -> None:
+    """Append this run's headline metrics to runs_index.json (idempotent on re-run)."""
+    index_path = results_root / "runs_index.json"
+    index: list[dict] = []
+    if index_path.exists():
+        try:
+            with open(index_path, encoding="utf-8") as fh:
+                index = json.load(fh)
+        except (json.JSONDecodeError, IOError):
+            pass
+    index = [e for e in index if e.get("run_id") != entry["run_id"]]
+    index.append(entry)
+    with open(index_path, "w", encoding="utf-8") as fh:
+        json.dump(index, fh, indent=2)
+    print(f"[index] runs_index.json  ({len(index)} run(s) total)")
+
+
 # ── entry point ───────────────────────────────────────────────────────────────
 
 def _cli() -> None:
@@ -333,20 +486,31 @@ def _cli() -> None:
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     ap.add_argument("--model-version", metavar="VER", default=None)
-    ap.add_argument("--test-csv", default=None, help="Path to test CSV. Defaults to latest in dataset/.")
-    ap.add_argument("--output-json", default="tflite_eval_results.json")
-    ap.add_argument("--log-every", type=int, default=20, metavar="N")
+    ap.add_argument("--test-csv",      default=None, help="Path to test CSV. Defaults to latest in dataset/.")
+    ap.add_argument("--platform",      default=None, help="Platform tag for run ID (auto-detected if omitted).")
+    ap.add_argument("--results-dir",   default=None, help="Base directory for versioned run outputs (default: evaluation_tflite/results/).")
+    ap.add_argument("--log-every",     type=int, default=20, metavar="N")
     args = ap.parse_args()
+
+    now           = datetime.datetime.now()
+    timestamp_fs  = now.strftime("%Y-%m-%d_%H%M%S")    # filesystem-safe
+    timestamp_iso = now.strftime("%Y-%m-%dT%H:%M:%S")  # ISO 8601 for JSON
+    platform_tag  = args.platform or _detect_platform()
 
     version   = resolve_model_version(args.model_version)
     model_dir = get_quantized_dir(version)
     test_csv  = Path(args.test_csv) if args.test_csv else default_dataset()
-    out_json  = Path(args.output_json)
+
+    results_root = Path(args.results_dir) if args.results_dir else RESULTS_ROOT
+    run_id  = f"eval_{version}_{platform_tag}_{timestamp_fs}"
+    run_dir = results_root / run_id
 
     if not model_dir.exists():
         sys.exit(f"Quantized model dir not found: {model_dir}\nRun quantize_tflite.py first.")
     if not test_csv.exists():
         sys.exit(f"Test CSV not found: {test_csv}")
+
+    print(f"[run]  {run_id}")
 
     enc, dec = load_models(model_dir)
     tokenizer = load_tokenizer(model_dir)
@@ -361,15 +525,33 @@ def _cli() -> None:
         tokenizer, enc, dec, decoder_start, eos, rows, log_every=args.log_every
     )
 
-    summary = build_summary(results, latencies, peak_mem, model_dir)
+    summary = build_summary(
+        results, latencies, peak_mem, model_dir,
+        run_id=run_id,
+        timestamp=timestamp_iso,
+        platform=platform_tag,
+        model_version=version,
+        dataset_name=test_csv.name,
+    )
 
-    with open(out_json, "w", encoding="utf-8") as fh:
-        json.dump(summary, fh, indent=2)
+    save_run_outputs(run_id, run_dir, summary, results, platform_tag, version, test_csv.name)
 
-    top = {k: v for k, v in summary.items() if k != "per_sample_results"}
-    print("\n=== TFLITE EVALUATION RESULTS ===")
-    print(json.dumps(top, indent=2))
-    print(f"\nFull results -> {out_json}")
+    acc = summary["accuracy"]
+    lat = summary["latency_ms"]
+    _update_runs_index(results_root, {
+        "run_id":          run_id,
+        "timestamp":       timestamp_iso,
+        "platform":        platform_tag,
+        "model_version":   version,
+        "dataset":         test_csv.name,
+        "n_samples":       acc["n_samples"],
+        "rouge1_f1":       acc.get("rouge1_f1"),
+        "rougeL_f1":       acc.get("rougeL_f1"),
+        "latency_mean_ms": lat["mean"],
+        "latency_p95_ms":  lat["p95"],
+        "peak_rss_mb":     summary["memory_mb"]["peak_rss_mb"],
+        "run_dir":         run_id,
+    })
 
 
 if __name__ == "__main__":

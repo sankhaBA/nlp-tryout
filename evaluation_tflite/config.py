@@ -20,6 +20,7 @@ DATASET_DIR = EVAL_ROOT.parent / "evaluation" / "dataset"
 SAVED_MODEL_ROOT = EVAL_ROOT / "saved_model"   # intermediate TF SavedModels
 TFLITE_ROOT      = EVAL_ROOT / "tflite"        # float32 TFLite models
 QUANTIZED_ROOT   = EVAL_ROOT / "quantized"     # INT8 quantized TFLite models
+RESULTS_ROOT     = EVAL_ROOT / "results"       # versioned evaluation run outputs
 
 
 def _version_key(name: str) -> tuple[int, ...]:

@@ -1,0 +1,16 @@
+[
+  {
+    "run_id": "eval_b4.3.2_windows_2026-06-07_122520",
+    "timestamp": "2026-06-07T12:25:20",
+    "platform": "windows",
+    "model_version": "b4.3.2",
+    "dataset": "nav_eval_android_v1.csv",
+    "n_samples": 196,
+    "rouge1_f1": 0.8043,
+    "rougeL_f1": 0.7817,
+    "latency_mean_ms": 49.01,
+    "latency_p95_ms": 81.76,
+    "peak_rss_mb": 439.4,
+    "run_dir": "eval_b4.3.2_windows_2026-06-07_122520"
+  }
+]
