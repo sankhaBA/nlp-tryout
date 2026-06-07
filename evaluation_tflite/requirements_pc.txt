@@ -1,0 +1,11 @@
+# PC requirements — TFLite export (Phase 1.2) and INT8 quantization (Phase 1.3)
+# Install in a dedicated venv (NOT the main training venv) to avoid transformers version conflicts:
+#   python -m venv venv_tflite
+#   .\venv_tflite\Scripts\activate
+#   pip install -r evaluation_tflite/requirements_pc.txt
+
+tensorflow>=2.13.0
+tf-keras                    # required for transformers 4.x compatibility with Keras 3
+transformers>=4.38.0,<5.0  # TFT5ForConditionalGeneration was removed in transformers 5.x
+sentencepiece>=0.1.99
+torch

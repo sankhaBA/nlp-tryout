@@ -1,0 +1,197 @@
+idx,latency_ms,input,target,predicted
+0,25.14,action: continue distance: 44 steps,Walk forward for 44 steps.,Walk straight for 44 steps.
+1,32.29,action: continue distance: 57 steps,Walk straight for 57 steps.,Walk straight for 57 steps.
+2,32.18,action: continue distance: 63 steps,Continue forward for 63 steps.,Walk straight for 63 steps.
+3,29.59,action: continue distance: 71 steps,Keep walking straight for 71 steps.,Walk straight for 71 steps.
+4,30.26,action: continue distance: 78 steps,Go straight for 78 steps.,Walk straight for 78 steps.
+5,31.29,action: continue distance: 83 steps,Walk straight for 83 steps.,Walk straight for 83 steps.
+6,24.97,action: continue distance: 37 steps,Walk forward for 37 steps.,Walk straight for 37 steps.
+7,25.31,action: continue distance: 53 steps,Continue straight for 53 steps.,Walk straight for 53 steps.
+8,32.86,action: continue distance: 66 steps,Go forward for 66 steps.,Walk straight for 66 steps.
+9,25.46,action: continue distance: 47 steps,Walk ahead for 47 steps.,Walk straight for 47 steps.
+10,31.54,action: continue distance: 74 steps,Keep walking straight for 74 steps.,Walk straight for 74 steps.
+11,30.04,action: continue distance: 89 steps,Walk straight for 89 steps.,Walk straight for 89 steps.
+12,30.16,action: continue distance: 61 steps,Continue forward for 61 steps.,Walk straight for 61 steps.
+13,26.67,action: continue direction: straight distance: 6 steps,Walk straight for 6 steps.,Walk straight for 6 steps.
+14,28.66,action: continue direction: straight distance: 16 steps,Continue walking straight for 16 steps.,Walk straight for 16 steps.
+15,26.51,action: continue direction: straight distance: 27 steps,Walk straight ahead for 27 steps.,Walk straight for 27 steps.
+16,25.45,action: continue direction: straight distance: 41 steps,Continue straight for 41 steps.,Walk straight for 41 steps.
+17,30.97,action: continue direction: straight distance: 58 steps,Walk straight for 58 steps.,Walk straight for 58 steps.
+18,27.52,action: continue direction: straight distance: 34 steps,Continue walking straight for 34 steps.,Walk straight for 34 steps.
+19,28.08,action: continue direction: straight distance: 49 steps,Walk straight for 49 steps.,Walk straight for 49 steps.
+20,26.81,action: continue direction: straight distance: 72 steps,Continue straight ahead for 72 steps.,Walk straight for 72 steps.
+21,26.56,action: continue direction: straight distance: 23 steps,Walk straight for 23 steps.,Walk straight for 23 steps.
+22,47.94,action: continue distance: 8 steps landmark: first aid station,Walk 8 steps straight to the first aid station.,Walk forward 8 steps to the first aid station.
+23,53.8,action: continue distance: 19 steps landmark: nursing room,Walk 19 steps forward to the nursing room.,Walk straight for 19 steps to reach the nursing room.
+24,61.43,action: continue distance: 31 steps landmark: valet desk,Walk straight for 31 steps to the valet desk.,Walk straight for 31 steps to reach the valet desk.
+25,51.89,action: continue distance: 43 steps landmark: ticket counter,Walk 43 steps forward to the ticket counter.,Walk straight for 43 steps to reach the ticket counter.
+26,60.78,action: continue distance: 24 steps landmark: Cinnabon,Walk straight for 24 steps to reach Cinnabon.,Walk straight for 24 steps to reach Cinnabon.
+27,47.92,action: continue distance: 36 steps landmark: KFC,Walk 36 steps forward to KFC.,Walk straight for 36 steps to reach KFC.
+28,45.0,action: continue distance: 15 steps landmark: Subway,Walk 15 steps straight ahead to Subway.,Walk straight for 15 steps to reach Subway.
+29,59.48,action: continue distance: 61 steps landmark: McDonald's,Walk straight for 61 steps to reach McDonald's.,Walk straight for 61 steps to reach McDonald's.
+30,44.64,action: continue distance: 11 steps landmark: eyewear store,Walk 11 steps straight ahead to the eyewear store.,Walk 11 steps forward to the eyewear store.
+31,50.87,action: continue distance: 46 steps landmark: parking entrance,Walk 46 steps forward to the parking entrance.,Walk straight for 46 steps to reach the parking entrance.
+32,56.42,action: continue distance: 27 steps landmark: stairwell,Walk straight for 27 steps to the stairwell.,Walk straight for 27 steps to reach the stairwell.
+33,49.72,action: continue distance: 39 steps landmark: LEGO Store,Walk 39 steps straight ahead to the LEGO Store.,Walk straight for 39 steps to reach the LEGO Store.
+34,49.53,action: continue distance: 52 steps landmark: prayer room,Walk straight for 52 steps to reach the prayer room.,Walk straight for 52 steps to reach the prayer room.
+35,35.59,action: continue distance: 7 steps landmark: Pandora,Walk 7 steps straight to Pandora.,Walk 7 steps forward to reach Pandora.
+36,56.82,action: continue distance: 33 steps landmark: toy store,Walk straight for 33 steps to the toy store.,Walk straight for 33 steps to reach the toy store.
+37,42.59,action: continue distance: 21 steps landmark: customer service desk,Walk 21 steps forward to the customer service desk.,Walk 21 steps straight to the customer service desk.
+38,48.8,action: continue distance: 14 steps landmark: Foot Locker,Walk 14 steps straight ahead to Foot Locker.,Walk straight for 14 steps to reach Foot Locker.
+39,55.75,action: continue distance: 68 steps landmark: food court,Walk straight for 68 steps to the food court.,Walk straight for 68 steps to reach the food court.
+40,46.12,action: continue direction: straight distance: 9 steps landmark: sports store,Walk straight for 9 steps to the sports store.,Walk forward 9 steps to reach the sports store.
+41,57.25,action: continue direction: straight distance: 25 steps landmark: eyewear store,Walk 25 steps straight ahead to the eyewear store.,Walk straight for 25 steps to reach the eyewear store.
+42,51.03,action: continue direction: straight distance: 37 steps landmark: electronics store,Continue 37 steps straight to the electronics store.,Walk straight for 37 steps to reach the electronics store.
+43,43.65,action: continue direction: straight distance: 48 steps landmark: Game Stop,Walk straight for 48 steps to reach Game Stop.,Walk straight for 48 steps to reach Game Stop.
+44,43.39,action: continue direction: straight distance: 12 steps landmark: concierge,Walk 12 steps straight to the concierge.,Walk straight for 12 steps to reach the concierge.
+45,72.95,action: continue direction: straight distance: 64 steps landmark: JD Sports,Walk straight for 64 steps to JD Sports.,Walk straight for 64 steps to reach JD Sports.
+46,50.67,action: continue direction: straight distance: 20 steps landmark: accessible restroom,Continue 20 steps straight to the accessible restroom.,Walk straight for 20 steps to reach the accessible restroom.
+47,64.52,action: continue direction: straight distance: 55 steps landmark: Bath & Body Works,Walk straight for 55 steps to Bath & Body Works.,Walk straight for 55 steps to reach Bath & Body Works.
+48,22.74,action: continue direction: up landmark: elevator,Take the elevator up to the next floor.,Walk up the elevator.
+49,22.67,action: continue direction: down landmark: elevator,Take the elevator down to the lower floor.,Continue down the elevator.
+50,50.98,action: continue direction: straight distance: 17 steps landmark: luggage storage,Continue 17 steps straight to the luggage storage.,Walk straight for 17 steps to reach the luggage storage.
+51,49.79,action: continue direction: straight distance: 30 steps landmark: information kiosk,Walk straight for 30 steps to the information kiosk.,Walk straight for 30 steps to reach the information kiosk.
+52,38.43,action: continue direction: straight distance: 5 steps landmark: elevator bank,Continue 5 steps straight to the elevator bank.,Walk 5 steps forward to the elevator bank.
+53,45.55,action: continue direction: straight distance: 44 steps landmark: bookstore,Walk straight for 44 steps to the bookstore.,Walk straight for 44 steps to reach the bookstore.
+54,45.99,action: continue direction: straight distance: 16 steps landmark: cinema,Walk 16 steps straight ahead to the cinema.,Walk straight for 16 steps to reach the cinema.
+55,14.47,action: turn direction: left,Turn left.,Turn left.
+56,35.76,action: turn direction: right,Turn right.,"In a right direction, turn right."
+57,29.8,action: turn direction: right distance: 4 steps,"In 4 steps, turn right.","In 4 steps, turn right."
+58,30.54,action: turn direction: left distance: 6 steps,"In 6 steps, turn left.","In 6 steps, turn left."
+59,29.39,action: turn direction: right distance: 9 steps,"In 9 steps, turn right.","In 9 steps, turn right."
+60,29.77,action: turn direction: left distance: 11 steps,"In 11 steps, turn left.","In 11 steps, turn left."
+61,30.29,action: turn direction: right distance: 16 steps,"In 16 steps, turn right.","In 16 steps, turn right."
+62,30.36,action: turn direction: left distance: 22 steps,"In 22 steps, turn left.","In 22 steps, turn left."
+63,30.21,action: turn direction: right distance: 27 steps,"In 27 steps, turn right.","In 27 steps, turn right."
+64,30.09,action: turn direction: left distance: 35 steps,"In 35 steps, turn left.","In 35 steps, turn left."
+65,29.25,action: turn direction: right distance: 43 steps,"In 43 steps, turn right.","In 43 steps, turn right."
+66,30.41,action: turn direction: left distance: 51 steps,"In 51 steps, turn left.","In 51 steps, turn left."
+67,29.81,action: turn direction: right distance: 14 steps,"In 14 steps, turn right.","In 14 steps, turn right."
+68,29.64,action: turn direction: left distance: 19 steps,"In 19 steps, turn left.","In 19 steps, turn left."
+69,30.1,action: turn direction: right distance: 26 steps,"In 26 steps, turn right.","In 26 steps, turn right."
+70,29.52,action: turn direction: left distance: 33 steps,"In 33 steps, turn left.","In 33 steps, turn left."
+71,29.49,action: turn direction: right distance: 7 steps,"In 7 steps, turn right.","In 7 steps, turn right."
+72,29.78,action: turn direction: left distance: 47 steps,"In 47 steps, turn left.","In 47 steps, turn left."
+73,30.6,action: turn direction: right distance: 38 steps,"In 38 steps, turn right.","In 38 steps, turn right."
+74,35.51,action: turn direction: left distance: 59 steps,"In 59 steps, turn left.","In 59 steps, turn left."
+75,30.72,action: turn direction: right distance: 21 steps,"In 21 steps, turn right.","In 21 steps, turn right."
+76,31.81,action: turn direction: left distance: 13 steps,"In 13 steps, turn left.","In 13 steps, turn left."
+77,51.86,action: turn direction: right distance: 5 steps landmark: Foot Locker,"In 5 steps, turn right towards Foot Locker.","In 5 steps, turn right towards Foot Locker."
+78,63.12,action: turn direction: left distance: 8 steps landmark: escalator,"In 8 steps, turn left towards the escalator.","In 8 steps, turn left towards the escalator."
+79,38.22,action: turn direction: right distance: 12 steps landmark: Pandora,"In 12 steps, turn right towards Pandora.","In 12 steps, turn right towards Pandora."
+80,45.46,action: turn direction: left distance: 17 steps landmark: elevator,"In 17 steps, turn left towards the elevator.","In 17 steps, turn left towards the elevator."
+81,50.27,action: turn direction: right distance: 23 steps landmark: food court,"In 23 steps, turn right towards the food court.","In 23 steps, turn right towards the food court."
+82,44.67,action: turn direction: left distance: 29 steps landmark: cinema,"In 29 steps, turn left towards the cinema.","In 29 steps, turn left towards the cinema."
+83,38.13,action: turn direction: right distance: 34 steps landmark: ATM,"In 34 steps, turn right towards the ATM.","In 34 steps, turn right towards ATM."
+84,56.85,action: turn direction: left distance: 42 steps landmark: customer service desk,"In 42 steps, turn left towards the customer service desk.","In 42 steps, turn left towards the customer service desk."
+85,45.47,action: turn direction: right distance: 9 steps landmark: stairs,"In 9 steps, turn right towards the stairs.","In 9 steps, turn right towards the stairs."
+86,57.09,action: turn direction: left distance: 15 steps landmark: Cinnabon,"In 15 steps, turn left towards Cinnabon.","In 15 steps, turn left towards Cinnabon."
+87,46.83,action: turn direction: right distance: 20 steps landmark: bookstore,"In 20 steps, turn right towards the bookstore.","In 20 steps, turn right towards the bookstore."
+88,50.19,action: turn direction: left distance: 28 steps landmark: accessible restroom,"In 28 steps, turn left towards the accessible restroom.","In 28 steps, turn left towards the accessible restroom."
+89,51.0,action: turn direction: right distance: 36 steps landmark: JD Sports,"In 36 steps, turn right towards JD Sports.","In 36 steps, turn right towards JD Sports."
+90,50.51,action: turn direction: left distance: 44 steps landmark: parking entrance,"In 44 steps, turn left towards the parking entrance.","In 44 steps, turn left towards the parking entrance."
+91,50.96,action: turn direction: right distance: 11 steps landmark: information kiosk,"In 11 steps, turn right towards the information kiosk.","In 11 steps, turn right towards the information kiosk."
+92,56.25,action: turn direction: left distance: 25 steps landmark: toy store,"In 25 steps, turn left towards the toy store.","In 25 steps, turn left towards the toy store."
+93,50.32,action: turn direction: right distance: 31 steps landmark: sports store,"In 31 steps, turn right towards the sports store.","In 31 steps, turn right towards the sports store."
+94,44.53,action: turn direction: left distance: 38 steps landmark: LEGO Store,"In 38 steps, turn left towards the LEGO Store.","In 38 steps, turn left towards LEGO Store."
+95,45.82,action: turn direction: right distance: 46 steps landmark: Game Stop,"In 46 steps, turn right towards Game Stop.","In 46 steps, turn right towards Game Stop."
+96,55.54,action: turn direction: left distance: 53 steps landmark: first aid station,"In 53 steps, turn left towards the first aid station.","In 53 steps, turn left towards the first aid station."
+97,43.66,action: turn direction: right distance: 7 steps landmark: pharmacy,"In 7 steps, turn right towards the pharmacy.","In 7 steps, turn right towards the pharmacy."
+98,50.93,action: turn direction: left distance: 14 steps landmark: nursing room,"In 14 steps, turn left towards the nursing room.","In 14 steps, turn left towards the nursing room."
+99,49.69,action: turn direction: right distance: 19 steps landmark: electronics store,"In 19 steps, turn right towards the electronics store.","In 19 steps, turn right towards the electronics store."
+100,51.8,action: turn direction: left distance: 33 steps landmark: prayer room,"In 33 steps, turn left towards the prayer room.","In 33 steps, turn left towards the prayer room."
+101,58.21,action: turn direction: right distance: 41 steps landmark: valet desk,"In 41 steps, turn right towards the valet desk.","In 41 steps, turn right towards the valet desk."
+102,44.98,action: turn direction: left distance: 3 steps landmark: KFC,"In 3 steps, turn left towards KFC.","In 3 steps, turn left towards KFC."
+103,51.31,action: turn direction: right distance: 57 steps landmark: Subway,"In 57 steps, turn right towards Subway.","In 57 steps, turn right towards Subway."
+104,31.62,action: turn direction: left landmark: elevator,Turn left towards the elevator.,"In die elevator, turn left."
+105,88.51,action: turn direction: right landmark: escalator,Turn right towards the escalator.,"In a descending direction, turn right towards the escalator."
+106,46.7,action: turn direction: left landmark: stairs,Turn left towards the stairs.,"In die stairwelle, turn left."
+107,74.9,action: turn direction: right landmark: food court,Turn right towards the food court.,"In a descending direction, turn right towards the food court."
+108,40.96,action: turn direction: left landmark: Pandora,Turn left towards Pandora.,"In 45 minutes, turn left towards Pandora."
+109,81.17,action: turn direction: right landmark: customer service desk,Turn right towards the customer service desk.,"In die rechte Richtung, turn right towards the customer service desk."
+110,41.12,action: turn direction: left landmark: ATM,Turn left towards the ATM.,"In 45 minutes, turn left towards ATM."
+111,68.13,action: turn direction: right landmark: bookstore,Turn right towards the bookstore.,"In die rechte Richtung, turn right towards the bookstore."
+112,56.15,action: turn direction: left landmark: accessible restroom,Turn left towards the accessible restroom.,"In 2 steps, turn left towards the accessible restroom."
+113,15.87,action: stop,Stop here.,Stop here.
+114,34.37,action: stop landmark: Pandora,Stop. You have arrived at Pandora.,Stop here. You have reached Pandora.
+115,61.44,action: stop landmark: Bath & Body Works,Stop. You are at Bath & Body Works.,Stop here. You have reached Bath & Body Works.
+116,48.94,action: stop landmark: Foot Locker,Stop. You have reached Foot Locker.,Stop here. You have reached Foot Locker.
+117,46.85,action: stop landmark: information kiosk,Stop. You are at the information kiosk.,Stop here. You have reached the information kiosk.
+118,44.84,action: stop landmark: accessible restroom,Stop here. You have reached the accessible restroom.,Stop here. You have reached the accessible restroom.
+119,55.3,action: stop landmark: customer service desk,Stop. You have arrived at the customer service desk.,Stop here. You have reached the customer service desk.
+120,54.68,action: stop landmark: first aid station,Stop. The first aid station is directly in front of you.,Stop here. You have reached the first aid station.
+121,38.47,action: stop landmark: cinema,Stop. You have arrived at the cinema.,Stop here. You have reached the cinema.
+122,45.71,action: stop landmark: prayer room,Stop here. You have reached the prayer room.,Stop here. You have reached the prayer room.
+123,44.76,action: stop landmark: nursing room,Stop. The nursing room is directly in front of you.,Stop here. You have reached the nursing room.
+124,58.61,action: stop landmark: LEGO Store,Stop. You are at the LEGO Store.,Stop here. You have reached the LEGO Store.
+125,73.87,action: stop landmark: JD Sports,Stop. You have arrived at JD Sports.,Stop here. You have reached JD Sports.
+126,73.95,action: stop landmark: parking entrance,Stop. You have reached the parking entrance.,Stop here. You have reached the parking entrance.
+127,82.55,action: stop landmark: food court,Stop. You are at the food court.,Stop here. You have reached the food court.
+128,64.2,action: stop landmark: ticket counter,Stop. You are at the ticket counter.,Stop here. You have reached the ticket counter.
+129,55.55,action: stop landmark: luggage storage,Stop here. You have reached the luggage storage.,Stop here. You have reached the luggage storage.
+130,63.66,action: stop landmark: valet desk,Stop. The valet desk is directly in front of you.,Stop here. You have reached the valet desk.
+131,62.55,action: stop landmark: Cinnabon,Stop. You have arrived at Cinnabon.,Stop here. You have reached Cinnabon.
+132,41.91,action: stop landmark: KFC,Stop. You have arrived at KFC.,Stop here. You have reached KFC.
+133,47.85,action: stop landmark: Game Stop,Stop. You are at Game Stop.,Stop here. You have reached the Game Stop.
+134,41.08,action: stop landmark: Subway,Stop. You have reached Subway.,Stop here. You have reached Subway.
+135,51.62,action: stop landmark: McDonald's,Stop. You are at McDonald's.,Stop here. You have reached McDonald's.
+136,43.75,action: stop distance: 0 steps landmark: sports store,Stop. The sports store is directly in front of you.,Stop. You have reached the sports store.
+137,50.41,action: stop distance: 0 steps landmark: eyewear store,Stop. You have arrived at the eyewear store.,Stop. You have reached the eyewear store.
+138,63.95,action: stop distance: 0 steps landmark: electronics store,Stop. The electronics store is in front of you.,Stop here for 0 steps to reach the electronics store.
+139,37.31,action: stop distance: 0 steps landmark: bookstore,Stop. You have reached the bookstore.,Stop. You have reached the bookstore.
+140,49.97,action: stop distance: 0 steps landmark: toy store,Stop. You are at the toy store.,Stop. You have reached the toy store.
+141,124.22,action: board direction: up landmark: escalator,Step onto the escalator going up.,Step onto the escalator and take the escalator up to the next floor.
+142,48.32,action: board direction: down landmark: escalator,Step onto the escalator going down.,Step onto the escalator going down.
+143,68.0,action: board direction: up landmark: elevator,Enter the elevator and go up.,Step inside the elevator and select the 3rd floor button.
+144,61.37,action: board direction: down landmark: elevator,Enter the elevator to go down.,Step inside the elevator and go down to the basement level.
+145,36.5,action: board direction: up landmark: staircase,Begin climbing the staircase to the next floor.,Step onto the stairs and go up.
+146,37.31,action: board direction: down landmark: staircase,Walk down the staircase.,Step onto the stairs and go down.
+147,36.31,action: board direction: up landmark: stairs,Begin walking up the stairs.,Step onto the stairs and walk up.
+148,37.12,action: board direction: down landmark: stairs,Begin walking down the stairs.,Step onto the stairs and go down.
+149,23.15,action: board landmark: service elevator,Step into the service elevator.,Enter the service elevator.
+150,34.31,action: board direction: up landmark: emergency exit stairs,Begin climbing the emergency exit stairs.,Step onto the emergency exit stairs.
+151,51.85,action: board direction: down landmark: emergency exit stairs,Begin descending the emergency exit stairs.,Step onto the emergency exit stairs to go down.
+152,77.63,action: board direction: up landmark: service elevator,Take the service elevator up.,Step inside the service elevator and select the button for the second floor.
+153,41.59,action: board direction: down landmark: service elevator,Take the service elevator down.,Step inside the service elevator and go down.
+154,37.35,action: board direction: up distance: 12 steps landmark: staircase,Walk up 12 steps on the staircase.,Walk up 12 steps on the staircase.
+155,49.23,action: board direction: down distance: 15 steps landmark: stairs,Walk down 15 steps on the stairs.,Step down the stairs and walk down 15 steps.
+156,36.79,action: board direction: up distance: 8 steps landmark: stairs,Climb 8 steps up the stairs.,Walk up 8 steps on the stairs.
+157,42.01,action: board direction: down distance: 10 steps landmark: staircase,Descend 10 steps down the staircase.,Step down the stairs and walk 10 steps.
+158,29.22,action: board direction: up landmark: moving walkway,Step onto the moving walkway going up.,Step onto the moving walkway.
+159,40.76,action: board direction: down landmark: moving walkway,Step onto the moving walkway going down.,Step onto the moving walkway and go down.
+160,42.77,action: board direction: up distance: 20 steps landmark: staircase,Climb the staircase for 20 steps.,Walk up 20 steps to the next floor.
+161,37.18,action: board direction: down distance: 18 steps landmark: staircase,Walk down the staircase for 18 steps.,Step down the staircase for 18 steps.
+162,58.03,action: exit direction: straight distance: 6 steps landmark: elevator,Exit the elevator and walk straight for 6 steps.,Step out of the elevator and walk 6 steps forward.
+163,56.29,action: exit direction: straight distance: 9 steps landmark: elevator,Exit the elevator and walk straight for 9 steps.,Exit the elevator and walk straight for 9 steps.
+164,61.47,action: exit direction: straight distance: 14 steps landmark: elevator,Exit the elevator and walk straight for 14 steps.,Step out of the elevator and walk straight for 14 steps.
+165,55.88,action: exit direction: straight distance: 20 steps landmark: elevator,Exit the elevator and continue straight for 20 steps.,Exit the elevator and walk straight for 20 steps.
+166,56.46,action: exit direction: straight distance: 25 steps landmark: elevator,Exit the elevator and walk straight for 25 steps.,Exit the elevator and walk straight for 25 steps.
+167,58.57,action: exit direction: straight distance: 32 steps landmark: elevator,Exit the elevator and walk straight for 32 steps.,Exit the elevator and walk straight for 32 steps.
+168,61.4,action: exit direction: straight distance: 12 steps landmark: elevator,Exit the elevator and proceed straight for 12 steps.,Exit the elevator and walk straight for 12 steps.
+169,59.39,action: exit direction: straight distance: 18 steps landmark: elevator,Exit the elevator and walk 18 steps straight ahead.,Exit the elevator and walk straight for 18 steps.
+170,56.41,action: exit direction: straight distance: 40 steps landmark: elevator,Exit the elevator and continue walking straight for 40 steps.,Exit the elevator and walk straight for 40 steps.
+171,56.8,action: exit direction: straight distance: 7 steps landmark: elevator,Exit the elevator and walk straight for 7 steps.,Exit the elevator and walk 7 steps straight ahead.
+172,64.39,action: exit direction: left distance: 5 steps landmark: elevator,Exit the elevator and turn left for 5 steps.,Exit the elevator and walk 5 steps to your left.
+173,61.62,action: exit direction: left distance: 11 steps landmark: elevator,Exit the elevator and turn left for 11 steps.,Exit the elevator and walk 11 steps to your left.
+174,62.14,action: exit direction: left distance: 18 steps landmark: elevator,Exit the elevator and turn left for 18 steps.,Exit the elevator and walk 18 steps to your left.
+175,61.09,action: exit direction: left distance: 30 steps landmark: elevator,Exit the elevator and turn left for 30 steps.,Exit the elevator and walk 30 steps to your left.
+176,62.3,action: exit direction: left distance: 22 steps landmark: elevator,Exit the elevator and turn left for 22 steps.,Exit the elevator and walk 22 steps to your left.
+177,68.81,action: exit direction: right distance: 8 steps landmark: elevator,Exit the elevator and turn right for 8 steps.,Step out of the elevator and walk 8 steps to the right.
+178,68.79,action: exit direction: right distance: 15 steps landmark: elevator,Exit the elevator and turn right for 15 steps.,Step out of the elevator and walk 15 steps to the right.
+179,54.35,action: exit direction: right distance: 26 steps landmark: elevator,Exit the elevator and turn right for 26 steps.,Exit the elevator and walk right for 26 steps.
+180,66.26,action: exit direction: right distance: 35 steps landmark: elevator,Exit the elevator and turn right for 35 steps.,Step out of the elevator and walk right for 35 steps.
+181,72.73,action: exit direction: right distance: 10 steps landmark: elevator,Exit the elevator and turn right for 10 steps.,Step out of the elevator and walk right for 10 steps.
+182,74.03,action: exit direction: straight distance: 8 steps landmark: escalator,Step off the escalator and walk straight for 8 steps.,Step off the escalator and walk 8 steps forward.
+183,93.51,action: exit direction: straight distance: 15 steps landmark: escalator,Step off the escalator and walk straight for 15 steps.,Step off the escalator and walk 15 steps forward.
+184,83.16,action: exit direction: straight distance: 22 steps landmark: escalator,After stepping off the escalator,Step off the escalator and walk 22 steps forward.
+185,95.05,action: exit direction: straight distance: 30 steps landmark: escalator,After stepping off the escalator,Step off the escalator and walk 30 steps straight ahead.
+186,79.31,action: exit direction: straight distance: 12 steps landmark: escalator,After the escalator,Step off the escalator and walk 12 steps forward.
+187,91.11,action: exit direction: left distance: 6 steps landmark: escalator,Step off the escalator and turn left for 6 steps.,Step off the escalator and turn left for 6 steps.
+188,85.61,action: exit direction: right distance: 9 steps landmark: escalator,Step off the escalator and turn right for 9 steps.,Step off the escalator and turn right for 9 steps.
+189,71.57,action: exit direction: straight distance: 10 steps landmark: stairs,At the bottom of the stairs,Exit the stairs and walk 10 steps straight ahead.
+190,71.8,action: exit direction: straight distance: 16 steps landmark: stairs,At the bottom of the stairs,Exit the stairs and walk straight for 16 steps.
+191,78.84,action: exit direction: left distance: 7 steps landmark: stairs,At the bottom of the stairs,Exit the stairs and walk 7 steps to your left.
+192,81.76,action: exit direction: right distance: 12 steps landmark: stairs,At the bottom of the stairs,Exit the escalator and walk 12 steps right.
+193,59.22,action: exit direction: straight distance: 20 steps landmark: staircase,At the top of the staircase,Exit the stairs and walk straight for 20 steps.
+194,66.12,action: exit direction: left distance: 14 steps landmark: staircase,At the top of the staircase,Exit the stairs and walk 14 steps to your left.
+195,122.3,action: exit direction: right distance: 18 steps landmark: staircase,At the top of the staircase,Exit the escalator and turn right for 18 steps to the next floor.

@@ -1,6 +1,16 @@
 nav_t5_model_v1
 nav_t5_final_v1
 venv
+venv_tflite
 .env
 
 training-history
+
+evaluation/model
+evaluation/quantized
+evaluation/onnx
+
+evaluation_tflite/saved_model
+evaluation_tflite/tflite
+evaluation_tflite/quantized
+evaluation_tflite/model

@@ -1,0 +1,11 @@
+# Android / Termux / Pydroid requirements — on-device evaluation (Phase 4)
+# Install in Termux with: pip install -r requirements_android.txt
+#
+# tflite-runtime is Google's lightweight TFLite-only package (~5 MB).
+# It installs cleanly on ARM64 Android without the full TensorFlow stack.
+
+tflite-runtime
+tokenizers
+sentencepiece
+rouge-score
+psutil

@@ -1,0 +1,52 @@
+====================================================================
+  TFLite Navigation Model — Evaluation Report
+====================================================================
+  Run ID :              eval_b4.3.2_windows_2026-06-07_122520
+  Platform :            windows
+  Model :               b4.3.2
+  Dataset :             nav_eval_android_v1.csv  (196 samples)
+  Timestamp :           2026-06-07T12:25:20
+====================================================================
+  ROUGE SCORES
+    ROUGE-1 F1 :        0.8043
+    ROUGE-2 F1 :        0.6590
+    ROUGE-L F1 :        0.7817
+--------------------------------------------------------------------
+  LATENCY
+    Mean :              49.0 ms
+    Median :            48.1 ms
+    P95 :               81.8 ms
+    P99 :               122.3 ms
+    Min :               14.5 ms
+    Max :               124.2 ms
+--------------------------------------------------------------------
+  MEMORY
+    Peak RSS :          439.4 MB
+--------------------------------------------------------------------
+  MODEL FILES
+  decoder_step_int8.tflite                  59.1 MB
+  encoder_int8.tflite                       35.8 MB
+====================================================================
+  PREDICTION SAMPLES
+
+  Input     : action: continue distance: 44 steps
+  Target    : Walk forward for 44 steps.
+  Predicted : Walk straight for 44 steps.
+
+  Input     : action: continue distance: 57 steps
+  Target    : Walk straight for 57 steps.
+  Predicted : Walk straight for 57 steps.
+
+  Input     : action: continue distance: 63 steps
+  Target    : Continue forward for 63 steps.
+  Predicted : Walk straight for 63 steps.
+
+  Input     : action: continue distance: 71 steps
+  Target    : Keep walking straight for 71 steps.
+  Predicted : Walk straight for 71 steps.
+
+  Input     : action: continue distance: 78 steps
+  Target    : Go straight for 78 steps.
+  Predicted : Walk straight for 78 steps.
+
+====================================================================
