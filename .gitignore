@@ -14,3 +14,5 @@ evaluation_tflite/saved_model
 evaluation_tflite/tflite
 evaluation_tflite/quantized
 evaluation_tflite/model
+
+evaluation_server/model
